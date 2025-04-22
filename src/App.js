@@ -5,9 +5,9 @@ import Filter from './components/Filter';
 import Cards from './components/Cards';
 import { toast } from 'react-toastify';
 
-
 function App() {
   const [courses, setCourses] = useState(null);
+  const [category, setCategory] = useState(filterData[0].title);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -16,27 +16,33 @@ function App() {
         const result = await response.json();
         setCourses(result.data);
       } catch (error) {
-        toast.error('Error fetching data');
+        toast.error('Error fetching course data');
       }
     };
     fetchData();
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <div>
-      <Navbar/>
-      </div>
-      <div>
-        <Filter filterData={filterData} />
-      </div>
-      
-      <div className="w-11/12 max-w-[1200px] mx-auto flex flex-wrap justify-center items-center min-h-[50vh]">
-  {
-    courses ? <Cards courses={courses} /> : <p>Loading...</p>
-  }
-</div>
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-700 via-gray-800 to-gray-900 text-white font-sans">
+      {/* Navbar */}
+      <header className="shadow-md">
+        <Navbar />
+      </header>
 
+      {/* Main Content */}
+      <main className="flex flex-col items-center gap-6 mt-8 px-4">
+        {/* Filter Buttons */}
+        <Filter filterData={filterData} category={category} setCategory={setCategory} />
+
+        {/* Courses Section */}
+        <section className="w-full max-w-[1200px] mx-auto flex flex-wrap justify-center items-center min-h-[50vh] mt-2 px-2 sm:px-0">
+          {courses ? (
+            <Cards courses={courses} category={category} />
+          ) : (
+            <div className="text-lg text-gray-300 animate-pulse">Loading courses...</div>
+          )}
+        </section>
+      </main>
     </div>
   );
 }

@@ -1,20 +1,35 @@
 import React from "react";
 import Card from "./Card";
 
-function Cards({ courses }) {
-    const getCourses = () => {
-        return Object.values(courses).flat();
-    }
+function Cards({ courses, category }) {
+  const [likedcourses, setLikedCourses] = React.useState([]);
 
-    return (
-        <div className="flex flex-wrap justify-center gap-4 mb-4">
-            {
-                getCourses().map((course, index) => (
-                    <Card key={index} course={course} />
-                ))
-            }
-        </div>
-    );
+  function getCourses() {
+    if (category === "All") {
+      let allCourses = [];
+      Object.values(courses).forEach((array) => {
+        array.forEach((courseData) => {
+          allCourses.push(courseData);
+        });
+      });
+      return allCourses;
+    } else {
+      return courses[category] || [];
+    }
+  }
+
+  return (
+    <div className="flex flex-wrap justify-center gap-6 p-4 sm:p-6 lg:p-8">
+      {getCourses().map((course, index) => (
+        <Card
+          key={index}
+          course={course}
+          likedcourses={likedcourses}
+          setLikedCourses={setLikedCourses}
+        />
+      ))}
+    </div>
+  );
 }
 
 export default Cards;
