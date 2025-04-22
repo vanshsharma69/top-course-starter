@@ -1,21 +1,20 @@
-import react from "react";
+import React from "react";
+import Card from "./Card";
 
-function Cards({courses}) {
+function Cards({ courses }) {
+    const getCourses = () => {
+        return Object.values(courses).flat();
+    }
 
-    let allCourses=[];
-
-    const getCourses=()=>{
-        Object.values(courses).forEach((courseCategory)=>{
-            courseCategory.forEach((course)=>{
-                allCourses.push(course);
-            });
-        });
-    }   
-
-    return(
-        <div>
-            
+    return (
+        <div className="flex flex-wrap justify-center gap-4 mb-4">
+            {
+                getCourses().map((course, index) => (
+                    <Card key={index} course={course} />
+                ))
+            }
         </div>
-    )
+    );
 }
+
 export default Cards;
