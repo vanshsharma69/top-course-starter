@@ -23,7 +23,7 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-700 via-gray-800 to-gray-900 text-white font-sans">
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-900 via-gray-700 to-green-950 text-white font-sans">
       {/* Navbar */}
       <header className="shadow-md">
         <Navbar />

@@ -1,18 +1,71 @@
-# Hi I m Vansh Sharma and this is my Mini project on React
+# **📚 Top Courses Portal**  
+*A curated list of courses across Development, Business, Design, and Lifestyle.*  
 
-## About ME
-Passionate Flutter and React developer with experience building mobile apps like YuvaPrabha (career guidance), Specifit (fitness tracker), and Medicare (health app). Skilled in Firebase, and clean UI design. Focused on creating efficient, user-friendly applications with optimal performance.
+---
 
-## Top-Courses Project
-This Project is my personal mini project 
+## **✨ Features**  
+- **Filter by Category**: Browse courses in Development, Business, Design, or Lifestyle.  
+- **Course Previews**: Quick descriptions for each course.  
+- **Clean UI**: Simple, responsive layout.  
 
-### Concept Used :
+---
 
-1. Used React and API
-2. Created Components like Navbar, Filter , Cards and Card
-3. Created a data.js file to pass the data as an array for filter 
+## **🖥️ Preview**  
+*(Add a screenshot or GIF here if available)*  
+```plaintext
+[Live Demo](#) | [Video Walkthrough](#)
+```
 
-## Features 
-1. All courses Cards
-2. Fav icon Click toaster
-3. Filteration of courses According to filters 
+---
+
+## **📌 Course Catalog**  
+| Course Title | Category | Description |  
+|--------------|----------|-------------|  
+| **Web Development Fundamentals** | Development | Covers basic tools for building static/dynamic websites. |  
+| **Data Science Essentials** | Development | Introduces fundamental data science concepts. |  
+| **Software Testing Fundamentals** | Development | Basics of test planning, case design, and execution. |  
+| **Mobile App Development** | Development | Build cross-platform mobile apps. |  
+| **DevOps for Agile Teams** | Business | CI/CD, automation, and Agile collaboration. |  
+| **Introduction to Marketing** | Business | Core principles of digital and traditional marketing. |  
+
+---
+
+## **🛠️ Tech Stack**  
+- **Frontend**: React  
+- **Deployment**: Vercel  
+
+---
+
+## **🚀 How to Run Locally**  
+1. Clone the repo:  
+   ```sh
+   git clone https://github.com/your-username/top-courses.git
+   ```  
+2.  React, add `npm install` and `npm start`
+
+---
+
+## **📝 Filters**  
+```plaintext
+All | Development | Business | Design | Lifestyle
+```  
+Filters are interactive.
+
+---
+
+## **📬 Contact**  
+**🔗 GitHub**: [vanshsharma69](https://github.com/vanshsharma69)  
+**📧 Email**: 01vanshsharma@gmail.com
+
+---
+
+## **📜 License**  
+MIT © 2024 | [License File](LICENSE)  
+
+---
+
+**🌟 Pro Tip**:  
+- Add a search bar to find courses faster.  
+- Include enrollment links if courses are hosted elsewhere.  
+
+Let me know if you'd like to expand any section! 😊
